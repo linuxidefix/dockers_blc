@@ -15,6 +15,7 @@ RUN mkdir -p /opt/broadleaf && cd /opt/broadleaf && \
     mvn install && \
     mvn spring-boot:build-info
 
+EXPOSE 8082
 EXPOSE 8081
 EXPOSE 8080
 EXPOSE 8443
