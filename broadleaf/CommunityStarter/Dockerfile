@@ -21,4 +21,5 @@ EXPOSE 8983
 VOLUME /opt/broadleaf
 WORKDIR /opt/broadleaf/CommunityStarter
 # CMD ["mvn", "spring-boot:run"]
+
 CMD ["sh"]
