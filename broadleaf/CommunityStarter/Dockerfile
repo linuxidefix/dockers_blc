@@ -8,7 +8,7 @@ RUN apt-get update && \
     apt-get clean 
     
 RUN mkdir -p /opt/broadleaf && cd /opt/broadleaf && \
-    git clone https://github.com/BroadleafCommerce/CommunityStarter.git && \
+    git clone https://github.com/BroadleafCommerce/DemoSite CommunityStarter && \
     cd CommunityStarter && \
     mvn install && \
     mvn spring-boot:build-info
@@ -19,7 +19,7 @@ EXPOSE 8080
 EXPOSE 8443
 EXPOSE 8983
 VOLUME /opt/broadleaf
-WORKDIR /opt/broadleaf/CommunityStarter
-# CMD ["mvn", "spring-boot:run"]
+WORKDIR /opt/broadleaf/CommunityStarter/site
+CMD ["mvn", "spring-boot:run"]
 
-CMD ["sh"]
+# CMD ["sh"]
