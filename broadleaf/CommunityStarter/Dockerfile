@@ -19,7 +19,7 @@ EXPOSE 8080
 EXPOSE 8443
 EXPOSE 8983
 VOLUME /opt/broadleaf
-WORKDIR /opt/broadleaf/CommunityStarter/site
+WORKDIR /opt/broadleaf/CommunityStarter/admin
 CMD ["mvn", "spring-boot:run"]
 
 # CMD ["sh"]
