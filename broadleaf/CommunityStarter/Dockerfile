@@ -17,6 +17,7 @@ EXPOSE 8082
 EXPOSE 8081
 EXPOSE 8080
 EXPOSE 8443
+EXPOSE 8444
 EXPOSE 8983
 VOLUME /opt/broadleaf
 WORKDIR /opt/broadleaf/CommunityStarter/admin
