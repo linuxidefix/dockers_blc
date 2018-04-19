@@ -1,7 +1,11 @@
 # SOLR EMBEDDED
 FROM openjdk:8-jdk
 
-RUN apt-get update && \
+ENV TZ=Europe/Paris
+
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && \
+  echo $TZ > /etc/timezone && \
+  apt-get update && \
   apt-get install -y lsof && \
   mkdir -p /tmp/solr-5.3.1 && \
   wget http://archive.apache.org/dist/lucene/solr/5.3.1/solr-5.3.1.tgz -O /tmp/solr-5.3.1.tgz && \
