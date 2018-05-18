@@ -35,7 +35,7 @@ RUN set -x \
 	&& rm -rf /var/lib/apt/lists/* \
 	&& [ "$JAVA_HOME" = "$(docker-java-home)" ]
 
-ENV MAVEN_VERSION 3.5.0
+ENV MAVEN_VERSION 3.5.3
 
 RUN mkdir -p /usr/share/maven \
   && curl -fsSL http://apache.osuosl.org/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz \
